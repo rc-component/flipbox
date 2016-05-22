@@ -2,7 +2,6 @@ import React, { Component, PropTypes, Children } from 'react'
 import ReactDom from 'react-dom'
 import style from './style.css'
 import cx from 'classnames'
-import raf from 'raf'
 
 function emptyFn() {}
 
@@ -57,11 +56,9 @@ export default class Flipbox extends Component {
     let width = curr.clientWidth
     let height = curr.clientHeight
     let style = this.el.style
-    raf(() => {
-      style.width = width + 'px'
-      style.height = height + 'px'
-      this.props.onShown(visible)
-    })
+    style.width = width + 'px'
+    style.height = height + 'px'
+    this.props.onShown(visible)
   }
   render() {
     let props = this.props

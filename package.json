@@ -42,7 +42,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "component-raf": "^1.2.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0"
   },
@@ -51,6 +50,5 @@
     "npm": "^3.0.0"
   },
   "browser": {
-    "raf": "component-raf"
   }
 }
