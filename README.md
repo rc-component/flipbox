@@ -27,6 +27,8 @@ visible  | string | front    | could be 'front' and 'back'
 onShow | func | null | onShow handler
 onShown | func | null | onShown handler
 
+Use `className` and `style` to apply custom style to flipbox element.
+
 # License
 
 Copyright 2016 chemzqm@gmail.com
