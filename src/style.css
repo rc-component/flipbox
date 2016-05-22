@@ -1,0 +1,28 @@
+.flipbox {
+  display: block;
+  position: relative;
+  perspective: 800;
+}
+
+.flipbox > .wrapper {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 350ms ease-in-out;
+}
+
+.flipbox > .wrapper > div {
+  backface-visibility: hidden;
+}
+
+.flipbox > .wrapper > div:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  display: none;
+}
+
+.flipbox.flipped > .wrapper {
+  transform: rotateY(180deg);
+}
