@@ -49,15 +49,20 @@ export default class Flipbox extends Component {
     this.props.onShow(visible)
   }
   onShown(visible) {
+    let pStyle = this.props.style
     let current = visible === 'front' ? 0 : 1
     let back = 1^current
     this.refs[back].style.display = 'none'
     let curr = this.refs[current]
-    let width = curr.clientWidth
     let height = curr.clientHeight
+    let width = curr.clientWidth
     let style = this.el.style
-    style.width = width + 'px'
-    style.height = height + 'px'
+    if (!pStyle || !pStyle.width) {
+      style.width = width + 'px'
+    }
+    if (!pStyle || !pStyle.height) {
+      style.height = height + 'px'
+    }
     this.props.onShown(visible)
   }
   render() {
