@@ -17,12 +17,10 @@ export default class Flipbox extends Component {
     onShown: PropTypes.func,
     children: function (props, propName) {
       let children = props[propName]
-      if (!children || children.length !== 2) {
-        throw new Error('Expect two children to work')
-      }
-      if (children[0].type !== 'div' || children[1].type !== 'div') {
-        throw new Error('Expect two div children')
-      }
+      if (Children.count(children) !== 2) throw new Error('Expect two children to work')
+      Children.map(children, function (child) {
+        if (!child.type == 'div') throw new Error('Expect div children')
+      })
     }
   }
   componentDidMount() {
