@@ -8,7 +8,7 @@ Build with [webpack](https://webpack.github.io/) and [CSS Modules](https://githu
 
 ## Install
 
-  npm i rc-flipbox
+    npm i rc-flipbox
 
 ## Usage
 
